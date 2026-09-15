@@ -16,13 +16,6 @@ const CONTACT = {
   whatsappHref: "https://wa.me/989217820205",
 };
 
-const VIDEOS = {
-  youtube: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  aparat: "https://www.aparat.com/video/video/embed/videohash/glmiy57/vt/frame",
-} as const;
-
-type Platform = keyof typeof VIDEOS;
-
 const gateways = [
   {
     name: "جیبیت",
@@ -199,7 +192,6 @@ function HeroVisual() {
 export default function App() {
   const reduceMotion = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
-  const [platform, setPlatform] = useState<Platform>("youtube");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -221,7 +213,7 @@ export default function App() {
         <div className="container header-inner">
           <a href="#top" className="logo" aria-label="Warex">
             <LogoMark className="logo-mark" />
-            Warex
+            وارکس
           </a>
           <nav className="nav" aria-label="منوی اصلی">
             <a href="#features">قابلیت‌ها</a>
@@ -367,7 +359,7 @@ export default function App() {
             >
               <span className="section-kicker">ویدیو معرفی</span>
               <h2>Warex را در عمل ببینید</h2>
-              <p>ویدیو را از یوتیوب یا آپارات، هر کدام برای شما در دسترس‌تر است، انتخاب کنید.</p>
+              <p>ویدیو معرفی به‌زودی از یوتیوب و آپارات در دسترس قرار می‌گیرد.</p>
             </motion.div>
 
             <motion.div
@@ -378,39 +370,9 @@ export default function App() {
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.55 }}
             >
-              <div className="video-toolbar">
-                <p>پلتفرم پخش را انتخاب کنید</p>
-                <div className="platform-switch" role="tablist" aria-label="انتخاب منبع ویدیو">
-                  <button
-                    type="button"
-                    role="tab"
-                    aria-selected={platform === "youtube"}
-                    className={platform === "youtube" ? "active" : ""}
-                    onClick={() => setPlatform("youtube")}
-                  >
-                    YouTube
-                  </button>
-                  <button
-                    type="button"
-                    role="tab"
-                    aria-selected={platform === "aparat"}
-                    className={platform === "aparat" ? "active" : ""}
-                    onClick={() => setPlatform("aparat")}
-                  >
-                    آپارات
-                  </button>
-                </div>
-              </div>
-              <div className="video-frame">
-                <iframe
-                  key={platform}
-                  src={VIDEOS[platform]}
-                  title={platform === "youtube" ? "ویدیو معرفی Warex در یوتیوب" : "ویدیو معرفی Warex در آپارات"}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                />
+              <div className="video-frame video-soon" role="status">
+                <span className="video-soon-label">Coming Soon</span>
+                <p>ویدیو معرفی به‌زودی منتشر می‌شود</p>
               </div>
             </motion.div>
           </div>
