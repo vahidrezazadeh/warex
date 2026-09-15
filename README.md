@@ -1,32 +1,95 @@
-# React + TypeScript + Vite
+# Warex — پلتفرم OTC و P2P ارز دیجیتال
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+زیرساخت آماده برای راه‌اندازی صرافی با احراز هویت اتوماتیک، اتصال به صرافی‌های خارجی و درگاه‌های پرداخت ایرانی.
 
-Currently, two official plugins are available:
+این مخزن، لندینگ معرفی محصول **Warex (وارکس)** است؛ با تم دارک، رابط فارسی (RTL) و انیمیشن‌های سبک.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## معرفی
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Warex** یک پلتفرم آماده برای راه‌اندازی صرافی ارز دیجیتال با تمرکز بر:
 
-## Expanding the Oxlint configuration
+- میز معاملات **OTC**
+- بازار **P2P** (همتا‌به‌همتا)
+- احراز هویت اتوماتیک
+- اتصال به صرافی‌های خارجی
+- درگاه‌های پرداخت ریالی ایرانی
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+---
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## قابلیت‌ها
+
+| قابلیت | توضیح |
+| --- | --- |
+| **احراز هویت اتوماتیک** | فرآیند KYC هوشمند با استعلام آنی هویت و کاهش زمان ورود کاربران به کمتر از چند دقیقه. |
+| **اتصال به صرافی‌های خارجی** | یکپارچه‌سازی با صرافی‌های بین‌المللی برای عمق نقدینگی، قیمت‌گذاری دقیق و پوشش OTC گسترده‌تر. |
+| **درگاه‌های پرداخت ایرانی** | اتصال آماده به جیبیت، وندار و زیبال برای واریز و برداشت ریالی پایدار و قابل اعتماد. |
+| **احراز شماره حساب جیبیت** | تطبیق آنی شماره شبا و کارت با هویت کاربر از طریق سرویس‌های جیبیت و کاهش ریسک تراکنش‌های نامعتبر. |
+| **معاملات OTC** | میز OTC برای معاملات حجیم با قیمت توافقی، تسویه سریع و پشتیبانی اختصاصی. |
+| **بازار همتا‌به‌همتا (P2P)** | معامله مستقیم بین کاربران با سفارش‌گذاری منعطف، ضمانت امنیتی و تجربه کاربری روان. |
+
+---
+
+## درگاه‌های پرداخت و سرویس‌های متصل
+
+- [جیبیت (Jibit)](https://jibit.ir)
+- [وندار (Vandar)](https://vandar.io)
+- [زیبال (Zibal)](https://zibal.ir)
+
+سایر ماژول‌های کلیدی محصول: **Auto KYC** · **External Exchanges** · **IBAN Verify** · **OTC Desk** · **P2P Market**
+
+---
+
+## ویدیو معرفی
+
+ویدیو معرفی Warex به‌زودی از **YouTube** و **آپارات** در دسترس قرار می‌گیرد.
+
+> **Coming Soon** — ویدیو معرفی به‌زودی منتشر می‌شود.
+
+---
+
+## درخواست دمو و تماس
+
+برای دمو و مشاوره راه‌اندازی با تیم Warex در ارتباط باشید. تیم آماده است قابلیت‌ها را روی محیط دمو نشان دهد و مسیر استقرار صرافی شما را طراحی کند.
+
+| کانال | مشخصات |
+| --- | --- |
+| **تلفن** | [`+98 921 782 0205`](tel:+989217820205) |
+| **ایمیل** | [`vahid.rezazadeh1372@gmail.com`](mailto:vahid.rezazadeh1372@gmail.com) |
+| **تلگرام** | [`@warex_support`](https://t.me/vahidrezazadeh) |
+| **واتساپ** | [`+98 921 782 0205`](https://wa.me/989217820205) |
+
+---
+
+## اجرای لندینگ (توسعه‌دهندگان)
+
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+ساخت خروجی برای انتشار (مثلاً GitHub Pages):
+
+```bash
+npm run build
+```
+
+فایل‌های استاتیک در پوشه `dist` تولید می‌شوند.
+
+برای پیش‌نمایش خروجی بیلد:
+
+```bash
+npm run preview
+```
+
+### فناوری‌ها
+
+- React + TypeScript
+- Vite
+- Framer Motion
+- فونت‌ها: Vazirmatn (فارسی) و Space Grotesk (انگلیسی)
+
+---
+
+© Warex — پلتفرم OTC و P2P
