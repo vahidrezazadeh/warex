@@ -57,7 +57,7 @@
 | --- | --- |
 | **تلفن** | [`+98 921 782 0205`](tel:+989217820205) |
 | **ایمیل** | [`vahid.rezazadeh1372@gmail.com`](mailto:vahid.rezazadeh1372@gmail.com) |
-| **تلگرام** | [`@warex_support`](https://t.me/vahidrezazadeh) |
+| **تلگرام** | [`@vahidrezazadeh`](https://t.me/vahidrezazadeh) |
 | **واتساپ** | [`+98 921 782 0205`](https://wa.me/989217820205) |
 
 ---

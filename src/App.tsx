@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import coverImage from "./assets/cover.png";
 import jibitLogo from "./assets/logos/jibit-dark.svg";
 import vandarLogo from "./assets/logos/vandar.svg";
 import zibalLogo from "./assets/logos/zibal-dark.svg";
@@ -10,7 +11,7 @@ const CONTACT = {
   phoneHref: "tel:+989217820205",
   email: "vahid.rezazadeh1372@gmail.com",
   emailHref: "mailto:vahid.rezazadeh1372@gmail.com",
-  telegram: "@warex_support",
+  telegram: "@vahidrezazadeh",
   telegramHref: "https://t.me/vahidrezazadeh",
   whatsapp: "+98 921 782 0205",
   whatsappHref: "https://wa.me/989217820205",
@@ -241,7 +242,7 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             >
-              Warex
+              وارکس
             </motion.p>
             <motion.h1
               initial={reduceMotion ? false : { opacity: 0, y: 20 }}
@@ -296,7 +297,7 @@ export default function App() {
               <span className="section-kicker">قابلیت‌ها</span>
               <h2>همه‌چیز برای راه‌اندازی یک صرافی حرفه‌ای</h2>
               <p>
-                از احراز هویت تا پرداخت ریالی و عمق بازار — Warex ماژول‌های کلیدی را یکجا در اختیار شما
+                از احراز هویت تا پرداخت ریالی و عمق بازار — وارکس ماژول‌های کلیدی را یکجا در اختیار شما
                 می‌گذارد.
               </p>
             </motion.div>
@@ -358,8 +359,8 @@ export default function App() {
               transition={{ duration: 0.55 }}
             >
               <span className="section-kicker">ویدیو معرفی</span>
-              <h2>Warex را در عمل ببینید</h2>
-              <p>ویدیو معرفی به‌زودی از یوتیوب و آپارات در دسترس قرار می‌گیرد.</p>
+              <h2>وارکس را در عمل ببینید</h2>
+              <p>نگاهی به محیط و تجربهٔ کاربری پلتفرم وارکس</p>
             </motion.div>
 
             <motion.div
@@ -370,9 +371,14 @@ export default function App() {
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.55 }}
             >
-              <div className="video-frame video-soon" role="status">
-                <span className="video-soon-label">Coming Soon</span>
-                <p>ویدیو معرفی به‌زودی منتشر می‌شود</p>
+              <div className="video-frame">
+                <img
+                  className="video-cover"
+                  src={coverImage}
+                  alt="پیش‌نمایش محیط وارکس"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </motion.div>
           </div>
@@ -391,7 +397,7 @@ export default function App() {
               >
                                 <h2>برای دمو و مشاوره راه‌اندازی تماس بگیرید</h2>
                 <p>
-                  تیم Warex آماده است قابلیت‌ها را روی محیط دمو نشان دهد و مسیر استقرار صرافی شما را
+                  تیم وارکس آماده است قابلیت‌ها را روی محیط دمو نشان دهد و مسیر استقرار صرافی شما را
                   طراحی کند.
                 </p>
               </motion.div>
@@ -509,7 +515,7 @@ export default function App() {
 
       <footer className="footer">
         <div className="container footer-inner">
-          <p>© {new Date().getFullYear()} Warex — پلتفرم OTC و P2P</p>
+          <p>© {new Date().getFullYear()} وارکس — پلتفرم OTC و P2P</p>
           <div className="footer-links">
             <a href="#features">قابلیت‌ها</a>
             <a href="#video">ویدیو</a>
