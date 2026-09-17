@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Host: https://warex.ir
+Sitemap: https://warex.ir/sitemap.xml
