@@ -1,3 +1,14 @@
+# Dependencies
+node_modules
+
+# Next.js
+.next
+out
+
+# Build / Vite leftovers
+dist
+dist-ssr
+
 # Logs
 logs
 *.log
@@ -7,12 +18,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Env
 *.local
+.env*.local
 
-# Editor directories and files
+# Editor
 .vscode/*
 !.vscode/extensions.json
 .idea

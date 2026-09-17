@@ -1,39 +1,28 @@
-import { useEffect, useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
-import coverImage from "./assets/cover.png";
-import jibitLogo from "./assets/logos/jibit-dark.svg";
-import vandarLogo from "./assets/logos/vandar.svg";
-import zibalLogo from "./assets/logos/zibal-dark.svg";
-import "./App.css";
+"use client";
 
-const CONTACT = {
-  phone: "+98 921 782 0205",
-  phoneHref: "tel:+989217820205",
-  email: "vahid.rezazadeh1372@gmail.com",
-  emailHref: "mailto:vahid.rezazadeh1372@gmail.com",
-  telegram: "@vahidrezazadeh",
-  telegramHref: "https://t.me/vahidrezazadeh",
-  whatsapp: "+98 921 782 0205",
-  whatsappHref: "https://wa.me/989217820205",
-};
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
+import coverImage from "@/assets/cover.png";
+import { CONTACT } from "@/lib/site";
 
 const gateways = [
   {
     name: "جیبیت",
     href: "https://jibit.ir",
-    src: jibitLogo,
+    src: "/logos/jibit-dark.svg",
     className: "gateway-logo--jibit",
   },
   {
     name: "وندار",
     href: "https://vandar.io",
-    src: vandarLogo,
+    src: "/logos/vandar.svg",
     className: "gateway-logo--vandar",
   },
   {
     name: "زیبال",
     href: "https://zibal.ir",
-    src: zibalLogo,
+    src: "/logos/zibal-dark.svg",
     className: "gateway-logo--zibal",
   },
 ] as const;
@@ -190,7 +179,7 @@ function HeroVisual() {
   );
 }
 
-export default function App() {
+export function HomePage() {
   const reduceMotion = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
 
@@ -212,7 +201,7 @@ export default function App() {
 
       <header className={`header${scrolled ? " scrolled" : ""}`}>
         <div className="container header-inner">
-          <a href="#top" className="logo" aria-label="Warex">
+          <a href="#top" className="logo" aria-label="وارکس">
             <LogoMark className="logo-mark" />
             وارکس
           </a>
@@ -372,12 +361,13 @@ export default function App() {
               transition={{ duration: 0.55 }}
             >
               <div className="video-frame">
-                <img
+                <Image
                   className="video-cover"
                   src={coverImage}
                   alt="پیش‌نمایش محیط وارکس"
-                  loading="lazy"
-                  decoding="async"
+                  fill
+                  sizes="(max-width: 1120px) 100vw, 1120px"
+                  priority={false}
                 />
               </div>
             </motion.div>
@@ -395,7 +385,7 @@ export default function App() {
                 viewport={{ once: true, amount: 0.35 }}
                 transition={{ duration: 0.55 }}
               >
-                                <h2>برای دمو و مشاوره راه‌اندازی تماس بگیرید</h2>
+                <h2>برای دمو و مشاوره راه‌اندازی تماس بگیرید</h2>
                 <p>
                   تیم وارکس آماده است قابلیت‌ها را روی محیط دمو نشان دهد و مسیر استقرار صرافی شما را
                   طراحی کند.

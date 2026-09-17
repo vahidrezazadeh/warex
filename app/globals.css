@@ -1,0 +1,68 @@
+:root {
+  --bg-deep: #060a0f;
+  --bg: #0b1219;
+  --bg-elevated: #121b26;
+  --bg-soft: #182433;
+  --line: rgba(94, 214, 255, 0.12);
+  --text: #e8f1f8;
+  --text-muted: #8fa3b8;
+  --brand: #2ee6a6;
+  --brand-2: #5ce1ff;
+  --accent: #f0b429;
+  --danger: #ff6b7a;
+  --glow-brand: rgba(46, 230, 166, 0.35);
+  --glow-cyan: rgba(92, 225, 255, 0.28);
+  --radius: 18px;
+  --font-fa: var(--font-yekan), "Yekan Bakh", sans-serif;
+  --font-en: var(--font-yekan), "Yekan Bakh", sans-serif;
+  --max: 1120px;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--font-fa);
+  background: var(--bg-deep);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  display: block;
+}
+
+img[data-nimg="fill"] {
+  max-width: none;
+}
+
+::selection {
+  background: rgba(46, 230, 166, 0.28);
+  color: #fff;
+}
